@@ -1,0 +1,17 @@
+:root {
+  --primary-color: #d35400; /* Naranja moderno */
+  --secondary-color: #fdfaf6; /* Beige claro */
+  --text-color: #333; /* Color de texto oscuro */
+  --border-color: #ddd; /* Borde suave */
+  --shadow-color: rgba(211, 84, 0, 0.1); /* Sombra */
+
+  --font-size-small: 1rem;
+  --font-size-medium: 1.2rem;
+  --font-size-large: 1.5rem;
+
+  --nav-height: 60px;
+  --nav-padding: 4.5rem;
+  --offcanvas-width: 300px;
+  --offcanvas-width-hidden: -300px;
+  --transition-ease: 0.2s ease-in-out;
+}

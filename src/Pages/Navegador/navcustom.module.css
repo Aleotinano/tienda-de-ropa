@@ -1,0 +1,113 @@
+/* Contenedor principal del navegador */
+.Navegador {
+  width: 100%;
+  height: var(--nav-height);
+  background-color: var(--background-color); /* Gris piedra */
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--nav-padding);
+  box-shadow: var(--shadow-color);
+  z-index: 5;
+}
+
+/* Enlaces horizontales por defecto */
+.Links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Enlaces individuales */
+.StrongLinks {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+}
+
+.StrongLinks:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Botones de usuario y carrito */
+.UserOptions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Botón de menú hamburguesa, oculto por defecto */
+.closemenu {
+  display: none;
+}
+
+/* Carrito y opciones adicionales (Responsive) */
+.offcanvas {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: var(--offcanvas-width-hidden);
+  width: var(--offcanvas-width);
+  height: 100%;
+  background-color: var(--secondary-color);
+  transition: var(--transition-ease);
+  padding: 1rem;
+  box-shadow: var(--shadow-color);
+}
+
+.showOffcanvas {
+  right: 0;
+}
+
+.hideOffcanvas {
+  right: var(--offcanvas-width-hidden);
+}
+
+/* Responsive: para pantallas pequeñas */
+@media (max-width: 768px) {
+  .Links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: var(--offcanvas-width-hidden);
+    width: var(--offcanvas-width);
+    height: 100%;
+    background-color: var(--secondary-color);
+    transition: var(--transition-ease);
+    padding: 1rem;
+    box-shadow: var(--shadow-color);
+    align-items: flex-start;
+    z-index: 1;
+  }
+
+  /* Menú visible */
+  .Navbarshow {
+    left: 0; /* Muestra el menú desde la izquierda */
+  }
+
+  .Navbarshow body {
+    filter: brightness(50%);
+  }
+
+  .Navbarhidden {
+    right: var(--offcanvas-width-hidden);
+  }
+
+  .closemenu {
+    display: block; /* Muestra el ícono de menú hamburguesa */
+    cursor: pointer;
+  }
+
+  .StrongLinks {
+    font-size: var(
+      --font-size-small
+    ); /* Tamaño ajustado para pantallas pequeñas */
+  }
+}

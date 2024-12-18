@@ -1,0 +1,15 @@
+.Cartbutton {
+  border: none;
+  fill: var(--primary-color);
+  transition: ease-in-out 0.1s;
+  background-color: transparent;
+  font-size: 1.4rem;
+  display: flex;
+  align-content: center;
+}
+
+.Cartbutton:hover {
+  color: var(--color);
+  background-color: transparent;
+  border-color: transparent;
+}

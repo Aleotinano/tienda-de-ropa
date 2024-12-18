@@ -1,0 +1,144 @@
+/* Contenedor principal */
+.Homecontainer {
+  width: 100%;
+  height: 90vh;
+  margin: 60px 0 0 0;
+  padding: 2rem 8%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 16px var(--shadow-color);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* Contenedor de contenido principal */
+.ContentContainer {
+  display: flex;
+  width: 100%;
+  align-items: end;
+}
+
+/* Columna Izquierda */
+.LeftContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 2; /* Ocupa la mitad del espacio */
+  width: 100%;
+  height: 100%;
+}
+
+.TitleContainer {
+  text-align: left;
+  margin-bottom: 1rem;
+  width: auto;
+}
+
+.TitleContainer h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.TitleContainer h2 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 0.5rem 0 0;
+}
+
+.img1 {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten */
+}
+
+.imagensheader {
+  width: 30%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Columna Derecha */
+.RightContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+}
+
+.imagensheaderHeight {
+  max-width: 100%;
+  min-width: 200px;
+  max-height: 100%;
+  min-height: 80vh;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Responsividad */
+
+@media (max-width: 1024px) {
+  .Homecontainer {
+    padding: 2rem 4%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Homecontainer {
+    padding: 2rem 1%;
+    background-image: url("../assets/fondo-responsivo.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .ContentContainer {
+    gap: 0.5rem;
+  }
+
+  .RightContainer {
+    display: none;
+  }
+
+  .TitleContainer {
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .TitleContainer h1 {
+    font-size: 4rem;
+    text-shadow: 1px 2px var(--secondary-color);
+  }
+
+  .TitleContainer h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin: 0.5rem 0 0;
+    text-shadow: 1px 2px var(--primary-color);
+  }
+
+  .imagensheader {
+    width: 25%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+
+  .img1 {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .Homecontainer {
+    padding: 2rem 0%;
+  }
+}
